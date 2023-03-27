@@ -8,7 +8,7 @@ WHERE `cfu` > 10;
 
 SELECT *
 FROM `students`
-WHERE (YEAR(CURDATE())) - (YEAR (`date_of_birth`)) > 30;
+WHERE DATEDIFF(CURDATE(), `date_of_birth`) > 30 * 365;
 
 SELECT *
 FROM `courses`
